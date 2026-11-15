@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imroz — CSE Student & Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="logo-circle">I</div>
+            IMROZ.
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="status">
+                <div class="status-dot"></div>
+                Available for opportunities
+            </div>
+            <h1>Build.better<br><span>with intent.</span></h1>
+            <p>I'm Imroz — a CSE student and web developer assistant crafting useful digital tools with a sharp eye for detail.</p>
+        </div>
+        
+        <div class="bg-code">
+            <div class="comment">// SystemParametersInfo</div>
+            <div>SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, chosen,</div>
+            <div style="padding-left: 40px;">SPIF_UPDATEINIFILE | SPIF_SENDCHANGE);</div>
+            <br>
+            <div class="comment">// The Web</div>
+            <div>&lt;div class="container"&gt;</div>
+            <div style="padding-left: 20px;">&lt;h1&gt;Hello World&lt;/h1&gt;</div>
+            <div>&lt;/div&gt;</div>
+        </div>
+                <!-- YEH NAYA CODE HAI -->
+        <div class="hero-graphic">
+            <img src="coding-pic.jpg.jpeg.png" alt="Coding Setup">
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-header">
+            <span class="section-number">01 —</span>
+            <h2 class="section-title">The Person</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Still learning.<br>Already building.</h3>
+                <p>I'm a CSE diploma student who likes turning messy ideas into clear, useful interfaces.</p>
+                <p>My work lives between the browser and the system underneath it. I'm currently continuing my 12th grade while growing through hands-on projects, code, and a lot of curiosity.</p>
+            </div>
+            <div class="edu-card">
+                <h4>Diploma in Computer Science & Engineering</h4>
+                <p>Currently: Continuing 12th grade</p>
+                <p style="margin-top: 15px; color: #d4a373; font-family: 'Fira Code', monospace;">// Building my next chapter</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header">
+            <span class="section-number">02 —</span>
+            <h2 class="section-title">The Toolkit</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item"><h4>HTML</h4><p>Structure & Semantics</p></div>
+            <div class="skill-item"><h4>CSS</h4><p>Layouts & Visual Systems</p></div>
+            <div class="skill-item"><h4>JavaScript</h4><p>Interaction & Logic</p></div>
+            <div class="skill-item"><h4>C / Systems</h4><p>Utilities & Fundamentals</p></div>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="section-header">
+            <span class="section-number">03 —</span>
+            <h2 class="section-title">Selected Work</h2>
+        </div>
+        
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-card reveal">
+                <!-- Image added here -->
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="project-info">
+                    <div class="project-tag">01 / Web Application</div>
+                    <h3>Time Distributor</h3>
+                    <p>Break a busy day into focused, doable blocks. A simple scheduling concept built to make time feel less overwhelming.</p>
+                    <a href="#" class="btn">View Project ↗</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card reveal">
+                <!-- Image added here -->
+                <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800');"></div>
+                <div class="project-info">
+                    <div class="project-tag">02 / C System Utility</div>
+                    <h3>Wallpaper Changer</h3>
+                    <p>A desktop utility that changes your wallpaper through a lightweight C program — direct, fast, and delightfully specific.</p>
+                    <a href="#code" class="btn">View Source ↘</a>
+                </div>
+            </div>
+
+            <!-- Code Container -->
+            <div class="code-container reveal" id="code">
+                <div class="code-header">
+                    <span>wallpaper.c</span>
+                    <span>C / Windows API</span>
+                </div>
+                <pre><code><span class="keyword">#include</span> <span class="string">&lt;stdio.h&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;stdlib.h&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;time.h&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;dirent.h&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;string.h&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;windows.h&gt;</span>
+
+<span class="keyword">#define</span> FOLDER_PATH <span class="string">"C:\\Users\\NEW\\Desktop\\wallpapers"</span>
+<span class="keyword">#define</span> MAX_FILES 500
+
+<span class="keyword">int</span> <span class="function">main</span>() {
+    DIR *dir;
+    <span class="keyword">struct</span> dirent *entry;
+    <span class="keyword">char</span> *images[MAX_FILES];
+    <span class="keyword">int</span> count = 0;
+
+    dir = <span class="function">opendir</span>(FOLDER_PATH);
+    <span class="keyword">if</span> (dir == NULL) {
+        <span class="function">printf</span>(<span class="string">"Folder nahi mila: %s\n"</span>, FOLDER_PATH);
+        <span class="keyword">return</span> 1;
+    }
+
+    <span class="comment">// Scan for image files</span>
+    <span class="keyword">while</span> ((entry = <span class="function">readdir</span>(dir)) != NULL) {
+        <span class="keyword">char</span> *name = entry->d_name;
+        <span class="keyword">int</span> len = <span class="function">strlen</span>(name);
+
+        <span class="keyword">if</span> ((len > 4 && <span class="function">strcmp</span>(name + len - 4, <span class="string">".jpg"</span>) == 0) ||
+            (len > 5 && <span class="function">strcmp</span>(name + len - 5, <span class="string">".jpeg"</span>) == 0) ||
+            (len > 4 && <span class="function">strcmp</span>(name + len - 4, <span class="string">".png"</span>) == 0) ||
+            (len > 4 && <span class="function">strcmp</span>(name + len - 4, <span class="string">".bmp"</span>) == 0)) {
+
+            <span class="keyword">char</span> full_path[1024];
+            <span class="function">snprintf</span>(full_path, <span class="keyword">sizeof</span>(full_path), <span class="string">"%s\\%s"</span>, FOLDER_PATH, name);
+            images[count] = <span class="function">_strdup</span>(full_path);
+            count++;
+        }
+    }
+    <span class="function">closedir</span>(dir);
+
+    <span class="keyword">if</span> (count == 0) {
+        <span class="function">printf</span>(<span class="string">"Koi image nahi mili folder mein!\n"</span>);
+        <span class="keyword">return</span> 1;
+    }
+
+    <span class="function">srand</span>(<span class="function">time</span>(NULL));
+    <span class="keyword">int</span> random_index = <span class="function">rand</span>() % count;
+    <span class="keyword">char</span> *chosen = images[random_index];
+
+    <span class="function">printf</span>(<span class="string">"Wallpaper set ho raha hai: %s\n"</span>, chosen);
+
+    <span class="function">SystemParametersInfo</span>(SPI_SETDESKWALLPAPER, 0, chosen,
+                         SPIF_UPDATEINIFILE | SPIF_SENDCHANGE);
+
+    <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; count; i++) <span class="function">free</span>(images[i]);
+
+    <span class="keyword">return</span> 0;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-header" style="justify-content: center;">
+            <span class="section-number">04 —</span>
+            <h2 class="section-title">Let's Connect</h2>
+        </div>
+        <h2>Have an idea?<br>Let's make it real.</h2>
+        <p>I'm open to learning, collaborating, and building useful things with good people.</p>
+        
+        <div class="contact-buttons">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=iktaf7865@gamil.com" target="_blank" class="btn btn-primary">Email Me ↗</a>
+            <a href="tel:+919315644287" class="btn">Call / WhatsApp ↗</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>IMROZ / CSE STUDENT & WEB DEVELOPER</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
