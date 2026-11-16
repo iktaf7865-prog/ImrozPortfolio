@@ -96,7 +96,7 @@
                     <div class="project-tag">01 / Web Application</div>
                     <h3>Time Distributor</h3>
                     <p>Break a busy day into focused, doable blocks. A simple scheduling concept built to make time feel less overwhelming.</p>
-                    <a href="#" class="btn">View Project ↗</a>
+                    <a href="https://iktaf7865-prog.github.io/Time-Distributer/" target="_blank" class="btn">View Live Project ↗</a>
                 </div>
             </div>
 
@@ -108,79 +108,10 @@
                     <div class="project-tag">02 / C System Utility</div>
                     <h3>Wallpaper Changer</h3>
                     <p>A desktop utility that changes your wallpaper through a lightweight C program — direct, fast, and delightfully specific.</p>
-                    <a href="#code" class="btn">View Source ↘</a>
+                    <a href="https://iktaf7865-prog.github.io/Wallpaper-Changer/" target="_blank" class="btn">View Live Project ↗</a>
                 </div>
             </div>
-
-            <!-- Code Container -->
-            <div class="code-container reveal" id="code">
-                <div class="code-header">
-                    <span>wallpaper.c</span>
-                    <span>C / Windows API</span>
-                </div>
-                <pre><code><span class="keyword">#include</span> <span class="string">&lt;stdio.h&gt;</span>
-<span class="keyword">#include</span> <span class="string">&lt;stdlib.h&gt;</span>
-<span class="keyword">#include</span> <span class="string">&lt;time.h&gt;</span>
-<span class="keyword">#include</span> <span class="string">&lt;dirent.h&gt;</span>
-<span class="keyword">#include</span> <span class="string">&lt;string.h&gt;</span>
-<span class="keyword">#include</span> <span class="string">&lt;windows.h&gt;</span>
-
-<span class="keyword">#define</span> FOLDER_PATH <span class="string">"C:\\Users\\NEW\\Desktop\\wallpapers"</span>
-<span class="keyword">#define</span> MAX_FILES 500
-
-<span class="keyword">int</span> <span class="function">main</span>() {
-    DIR *dir;
-    <span class="keyword">struct</span> dirent *entry;
-    <span class="keyword">char</span> *images[MAX_FILES];
-    <span class="keyword">int</span> count = 0;
-
-    dir = <span class="function">opendir</span>(FOLDER_PATH);
-    <span class="keyword">if</span> (dir == NULL) {
-        <span class="function">printf</span>(<span class="string">"Folder nahi mila: %s\n"</span>, FOLDER_PATH);
-        <span class="keyword">return</span> 1;
-    }
-
-    <span class="comment">// Scan for image files</span>
-    <span class="keyword">while</span> ((entry = <span class="function">readdir</span>(dir)) != NULL) {
-        <span class="keyword">char</span> *name = entry->d_name;
-        <span class="keyword">int</span> len = <span class="function">strlen</span>(name);
-
-        <span class="keyword">if</span> ((len > 4 && <span class="function">strcmp</span>(name + len - 4, <span class="string">".jpg"</span>) == 0) ||
-            (len > 5 && <span class="function">strcmp</span>(name + len - 5, <span class="string">".jpeg"</span>) == 0) ||
-            (len > 4 && <span class="function">strcmp</span>(name + len - 4, <span class="string">".png"</span>) == 0) ||
-            (len > 4 && <span class="function">strcmp</span>(name + len - 4, <span class="string">".bmp"</span>) == 0)) {
-
-            <span class="keyword">char</span> full_path[1024];
-            <span class="function">snprintf</span>(full_path, <span class="keyword">sizeof</span>(full_path), <span class="string">"%s\\%s"</span>, FOLDER_PATH, name);
-            images[count] = <span class="function">_strdup</span>(full_path);
-            count++;
-        }
-    }
-    <span class="function">closedir</span>(dir);
-
-    <span class="keyword">if</span> (count == 0) {
-        <span class="function">printf</span>(<span class="string">"Koi image nahi mili folder mein!\n"</span>);
-        <span class="keyword">return</span> 1;
-    }
-
-    <span class="function">srand</span>(<span class="function">time</span>(NULL));
-    <span class="keyword">int</span> random_index = <span class="function">rand</span>() % count;
-    <span class="keyword">char</span> *chosen = images[random_index];
-
-    <span class="function">printf</span>(<span class="string">"Wallpaper set ho raha hai: %s\n"</span>, chosen);
-
-    <span class="function">SystemParametersInfo</span>(SPI_SETDESKWALLPAPER, 0, chosen,
-                         SPIF_UPDATEINIFILE | SPIF_SENDCHANGE);
-
-    <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; count; i++) <span class="function">free</span>(images[i]);
-
-    <span class="keyword">return</span> 0;
-}</code></pre>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
+            <section id="contact" class="contact-section">
         <div class="section-header" style="justify-content: center;">
             <span class="section-number">04 —</span>
             <h2 class="section-title">Let's Connect</h2>
